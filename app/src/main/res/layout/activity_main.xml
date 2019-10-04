@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:background="#000000">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include
+                android:id="@+id/sydney"
+                layout="@layout/reusing"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <include
+                android:id="@+id/shanghai"
+                layout="@layout/reusing"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <include
+                android:id="@+id/london"
+                layout="@layout/reusing"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <include
+                android:id="@+id/tokyo"
+                layout="@layout/reusing"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <include
+                android:id="@+id/ny"
+                layout="@layout/reusing"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <include
+                android:id="@+id/paris"
+                layout="@layout/reusing"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=" Select to hide/unhide cities"
+                android:textSize="20dp"
+                style="@style/hourButton"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/hourButton">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:id="@+id/checkSydney"
+                        android:text="@string/sydney"/>
+
+                    <CheckBox
+                        android:id="@+id/checkShanghai"
+                        android:text="@string/shanghai"/>
+
+                    <CheckBox
+                        android:id="@+id/checkLondon"
+                        android:text="@string/london"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <CheckBox
+                        android:id="@+id/checkTokyo"
+                        android:text="@string/tokyo"/>
+
+                    <CheckBox
+                        android:id="@+id/checkNY"
+                        android:text="@string/ny"/>
+
+                    <CheckBox
+                        android:id="@+id/checkParis"
+                        android:text="@string/paris"/>
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/hour24BTN"
+        style="@style/hourButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="2dp"
+        android:text="24Hour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hour12BTN"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/hour12BTN"
+        style="@style/hourButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="2dp"
+        android:text="12Hour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hour24BTN"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
